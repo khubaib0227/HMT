@@ -116,6 +116,29 @@
 .video-tile.previewing video { opacity: 1; filter: brightness(1); }
 .video-tile video.video-play-failed { opacity: 0; }
 
+/* Video badge indicator */
+.video-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.video-badge i { color: #FFC700; font-size: 14px; }
+.video-tile.previewing .video-badge { background: rgba(0,0,0,0.75); }
+
 .video-play-button {
     position: absolute;
     top: 50%;

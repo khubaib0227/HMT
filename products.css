@@ -77,6 +77,8 @@
 .video-control-btn { position:absolute; bottom:18px; right:18px; background:rgba(0,0,0,0.55); color:#fff; border:none; padding:12px 14px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; transition:background .25s, transform .25s; }
 .video-control-btn:hover { background:rgba(0,0,0,0.75); transform:scale(1.05); }
 .video-control-btn:focus { outline:2px solid #ffd700; outline-offset:3px; }
+.video-control-btn.autoplay-failed { background:rgba(255,0,0,0.65); box-shadow:0 0 0 2px rgba(255,0,0,0.4); }
+.video-control-btn.autoplay-failed:hover { background:rgba(255,0,0,0.8); }
 .video-caption { font-size:14px; margin-top:12px; text-align:center; color:#333; }
 .visually-hidden { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0 0 0 0) !important; white-space:nowrap !important; border:0 !important; }
 @media (max-width:640px){ .video-control-btn{ bottom:12px; right:12px; padding:10px 11px; font-size:16px; } }

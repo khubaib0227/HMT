@@ -67,7 +67,7 @@
             <h2 id="productDemoHeading" class="visually-hidden">Product Demonstration Video</h2>
             <div class="video-showcase-container product-video-wrapper" data-video>
                 <div class="video-aspect-ratio">
-                    <video id="productHeroVideo" preload="metadata" playsinline muted loop poster="hero-video-poster.jpg" aria-describedby="videoCaption">
+                    <video id="productHeroVideo" preload="metadata" playsinline muted loop autoplay poster="hero-video-poster.jpg" aria-describedby="videoCaption">
                         <source src="hero-video.mp4" type="video/mp4">
                         <p>Your browser does not support the video tag. <a href="hero-video.mp4">Download the video</a>.</p>
                     </video>
@@ -278,30 +278,39 @@
             const btn = document.querySelector('.video-control-btn');
             if (!video || !btn) return;
 
-            // Attempt silent autoplay when in view
+            // Robust autoplay attempt (immediate + visibility based)
+            function setPlayingUI() {
+                btn.setAttribute('aria-label','Pause video');
+                btn.dataset.state = 'playing';
+                btn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            function setPausedUI() {
+                btn.setAttribute('aria-label','Play video');
+                btn.dataset.state = 'paused';
+                btn.innerHTML = '<i class="fas fa-play"></i>';
+            }
             const tryAutoplay = () => {
-                video.play().then(() => {
-                    btn.setAttribute('aria-label','Pause video');
-                    btn.dataset.state = 'playing';
-                    btn.innerHTML = '<i class="fas fa-pause"></i>';
-                }).catch(() => {
-                    // Autoplay blocked: keep button as play
+                video.play().then(setPlayingUI).catch(() => {
+                    // Mark failure so user can manually start
+                    btn.classList.add('autoplay-failed');
+                    setPausedUI();
                 });
             };
-
-            // Intersection observer to start/stop when scrolled
+            // Immediate attempt
+            tryAutoplay();
+            // Retry once after short delay
+            setTimeout(() => { if (video.paused) tryAutoplay(); }, 1000);
+            // Visibility-based control
             const io = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        tryAutoplay();
+                        if (video.paused) tryAutoplay();
                     } else {
-                        if (!video.paused) { video.pause(); }
-                        btn.setAttribute('aria-label','Play video');
-                        btn.dataset.state = 'paused';
-                        btn.innerHTML = '<i class="fas fa-play"></i>';
+                        if (!video.paused) video.pause();
+                        setPausedUI();
                     }
                 });
-            }, { threshold: 0.4 });
+            }, { threshold: 0.2 });
             io.observe(video);
 
             btn.addEventListener('click', () => {
@@ -326,9 +335,7 @@
             });
 
             // Fallback poster swap after first frame
-            video.addEventListener('playing', () => {
-                video.classList.add('is-playing');
-            });
+            video.addEventListener('playing', () => { video.classList.add('is-playing'); btn.classList.remove('autoplay-failed'); });
         })();
     </script>
     <script>
