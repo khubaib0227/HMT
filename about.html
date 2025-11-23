@@ -469,23 +469,47 @@
             const closeModalBtn = document.querySelector('.video-modal-close');
             const videoTiles = document.querySelectorAll('.video-tile');
 
-            // --- Ensure video tiles play & show fallback poster if error ---
+            // --- Hover Preview: play brief segment on hover/focus, then pause/reset ---
+            const PREVIEW_DURATION_MS = 4000; // length of preview
             videoTiles.forEach(tile => {
                 const video = tile.querySelector('video');
                 if (!video) return;
+                let previewTimeout;
 
-                const attemptPlay = () => {
-                    video.play().catch(err => {
-                        // Autoplay blocked or decode error: show poster clearly
-                        video.removeAttribute('autoplay');
+                function startPreview() {
+                    clearTimeout(previewTimeout);
+                    tile.classList.add('previewing');
+                    // Ensure we start from beginning for consistent preview
+                    try { video.currentTime = 0; } catch(e) {}
+                    video.play().catch(() => {
                         video.classList.add('video-play-failed');
                     });
-                };
+                    previewTimeout = setTimeout(() => {
+                        // If still hovering, allow continue else stop
+                        if (!tile.matches(':hover,:focus-within')) {
+                            stopPreview();
+                        } else {
+                            // Pause even if still hovered (short preview only)
+                            stopPreview();
+                        }
+                    }, PREVIEW_DURATION_MS);
+                }
 
-                // If metadata loads, try play
-                video.addEventListener('loadeddata', attemptPlay, { once: true });
-                // Fallback retry
-                setTimeout(attemptPlay, 1000);
+                function stopPreview() {
+                    clearTimeout(previewTimeout);
+                    video.pause();
+                    try { video.currentTime = 0; } catch(e) {}
+                    tile.classList.remove('previewing');
+                }
+
+                // Hover events
+                tile.addEventListener('mouseenter', startPreview);
+                tile.addEventListener('mouseleave', stopPreview);
+
+                // Keyboard accessibility
+                tile.setAttribute('tabindex','0');
+                tile.addEventListener('focus', startPreview);
+                tile.addEventListener('blur', stopPreview);
             });
 
             // This function creates an <iframe> (and YouTube player)

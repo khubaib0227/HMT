@@ -109,11 +109,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1; /* Always visible for continuous preview */
-    transition: opacity 0.3s ease;
+    opacity: 0; /* hidden until previewing */
+    transition: opacity 0.35s ease, filter 0.35s ease;
+    filter: brightness(0.9);
 }
-
-/* Removed hover-dependent opacity to prevent black tiles */
+.video-tile.previewing video { opacity: 1; filter: brightness(1); }
+.video-tile video.video-play-failed { opacity: 0; }
 
 .video-play-button {
     position: absolute;
