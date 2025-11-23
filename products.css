@@ -69,16 +69,17 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-
-.video-showcase-container video {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    border-radius: 10px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    display: block;
-    object-fit: cover;
-}
+/* New structured wrapper for hero video (see products.html) */
+.product-video-wrapper { margin: 20px auto 10px; }
+.video-aspect-ratio { position: relative; width: 100%; padding-top: 56.25%; background:#000; border-radius: 12px; overflow: hidden; box-shadow:0 10px 40px rgba(0,0,0,0.25); }
+.video-aspect-ratio video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block; }
+.video-aspect-ratio video:not(.is-playing) { filter: brightness(0.8) contrast(0.95); }
+.video-control-btn { position:absolute; bottom:18px; right:18px; background:rgba(0,0,0,0.55); color:#fff; border:none; padding:12px 14px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1; display:flex; align-items:center; justify-content:center; transition:background .25s, transform .25s; }
+.video-control-btn:hover { background:rgba(0,0,0,0.75); transform:scale(1.05); }
+.video-control-btn:focus { outline:2px solid #ffd700; outline-offset:3px; }
+.video-caption { font-size:14px; margin-top:12px; text-align:center; color:#333; }
+.visually-hidden { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0 0 0 0) !important; white-space:nowrap !important; border:0 !important; }
+@media (max-width:640px){ .video-control-btn{ bottom:12px; right:12px; padding:10px 11px; font-size:16px; } }
 
 /* Hero Split Layout */
 .hero-split {

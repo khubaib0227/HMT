@@ -62,12 +62,20 @@
     </section>
 
     <!-- Video Section -->
-    <section class="video-showcase-section">
+    <section class="video-showcase-section" aria-labelledby="productDemoHeading">
         <div class="container">
-            <div class="video-showcase-container">
-                <video autoplay loop playsinline muted controls>
-                    <source src="hero-video.mp4" type="video/mp4">
-                </video>
+            <h2 id="productDemoHeading" class="visually-hidden">Product Demonstration Video</h2>
+            <div class="video-showcase-container product-video-wrapper" data-video>
+                <div class="video-aspect-ratio">
+                    <video id="productHeroVideo" preload="metadata" playsinline muted loop poster="hero-video-poster.jpg" aria-describedby="videoCaption">
+                        <source src="hero-video.mp4" type="video/mp4">
+                        <p>Your browser does not support the video tag. <a href="hero-video.mp4">Download the video</a>.</p>
+                    </video>
+                    <button class="video-control-btn" type="button" aria-label="Play video" data-state="paused">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                <div id="videoCaption" class="video-caption">High precision tooling in action – watch a brief overview of our manufacturing and inspection workflow.</div>
             </div>
         </div>
     </section>
@@ -263,6 +271,66 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Product page video controls & progressive playback
+        (function(){
+            const video = document.getElementById('productHeroVideo');
+            const btn = document.querySelector('.video-control-btn');
+            if (!video || !btn) return;
+
+            // Attempt silent autoplay when in view
+            const tryAutoplay = () => {
+                video.play().then(() => {
+                    btn.setAttribute('aria-label','Pause video');
+                    btn.dataset.state = 'playing';
+                    btn.innerHTML = '<i class="fas fa-pause"></i>';
+                }).catch(() => {
+                    // Autoplay blocked: keep button as play
+                });
+            };
+
+            // Intersection observer to start/stop when scrolled
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        tryAutoplay();
+                    } else {
+                        if (!video.paused) { video.pause(); }
+                        btn.setAttribute('aria-label','Play video');
+                        btn.dataset.state = 'paused';
+                        btn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+            }, { threshold: 0.4 });
+            io.observe(video);
+
+            btn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    btn.setAttribute('aria-label','Pause video');
+                    btn.dataset.state = 'playing';
+                    btn.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    video.pause();
+                    btn.setAttribute('aria-label','Play video');
+                    btn.dataset.state = 'paused';
+                    btn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            });
+
+            // Keyboard accessibility
+            btn.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); btn.click();
+                }
+            });
+
+            // Fallback poster swap after first frame
+            video.addEventListener('playing', () => {
+                video.classList.add('is-playing');
+            });
+        })();
+    </script>
     <script>
         // Product data
         const products = [
