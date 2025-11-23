@@ -109,15 +109,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Hide video by default to show the poster */
-    opacity: 0;
+    opacity: 1; /* Always visible for continuous preview */
     transition: opacity 0.3s ease;
 }
 
-.video-tile:hover video {
-    /* Show video on hover for the preview */
-    opacity: 1;
-}
+/* Removed hover-dependent opacity to prevent black tiles */
 
 .video-play-button {
     position: absolute;
