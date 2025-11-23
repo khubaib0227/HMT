@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - HMT Tools | Professional Hardware Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 1-800-HMT-TOOL</span>
+                    <span><i class="fas fa-envelope"></i> info@hmttools.com</span>
+                </div>
+                <div class="top-links">
+                    <a href="index.html#support">Support</a>
+                    <a href="index.html#dealer">Find a Dealer</a>
+                    <a href="index.html#login">Login</a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="hmtlogotagline.png" alt="HMT Tools Logo" class="logo-image"></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li ><a href="about.html">ABOUT</a></li>
+                    <li class="active-page"><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="support.html">SUPPORT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <a href="https://wa.me/923270177567?text=Hi%2C%20I%20need%20information%20about%20the%20Products." class="quote-btn" target="_blank" rel="noopener">Get Quote Now</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Hero Section -->
+    <section class="hero hero-secondary products-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Our Complete Product Line</h2>
+                <p>Everything you need for professional-grade performance</p>
+                <p class="hero-subtext">Featuring premium tools from industry-leading brands including Dormer Pramet - renowned for high-precision cutting tools, solid carbide drills, and innovative machining solutions trusted by professionals worldwide.</p>
+                <a href="#our-product-line" class="btn btn-primary">Browse Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-showcase-section">
+        <div class="container">
+            <div class="video-showcase-container">
+                <video autoplay loop playsinline muted controls>
+                    <source src="hero-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="products-filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" placeholder="Search products by name or SKU..." class="search-input">
+                </div>
+                <div class="filter-controls">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="hand-tools">Hand Tools</option>
+                        <option value="power-tools">Power Tools</option>
+                        <option value="cutting-tools">Cutting Tools</option>
+                        <option value="measuring-tools">Measuring Tools</option>
+                        <option value="storage">Storage Solutions</option>
+                    </select>
+                    <button class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tools Section -->
+    <section class="featured-tools-section">
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="featured-tools-grid">
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/1108.jpg" alt="Digital Vernier Caliper - 150mm">
+                        <div class="tool-badge gold">Top Seller</div>
+                    </div>
+                    <h3>Digital Vernier Caliper - 150mm</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.9 (89 reviews)</p>
+                    <p class="tool-specs">High-precision digital caliper with LCD display and stainless-steel body</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Digital%20Vernier%20Caliper%20-%20150mm*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/1312.jpg" alt="Dial Caliper - 150mm">
+                        <div class="tool-badge gold">Best Value</div>
+                    </div>
+                    <h3>Dial Caliper - 150mm</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.6 (78 reviews)</p>
+                    <p class="tool-specs">Durable dial caliper with clear analog scale for precise measurement</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Dial%20Caliper%20-%20150mm*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/1205.jpg" alt="Stainless Steel Vernier Caliper - 150mm">
+                        <div class="tool-badge gold">Premium</div>
+                    </div>
+                    <h3>Stainless Steel Vernier Caliper - 150mm</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.7 (94 reviews)</p>
+                    <p class="tool-specs">Classic vernier caliper with dual measurement scales for reliable readings</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Stainless%20Steel%20Vernier%20Caliper%20-%20150mm*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/1115.jpg" alt="Digital Vernier Caliper - Premium Model">
+                        <div class="tool-badge gold">Recommended</div>
+                    </div>
+                    <h3>Digital Vernier Caliper - Premium Model</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.9 (145 reviews)</p>
+                    <p class="tool-specs">High-accuracy digital caliper with reinforced frame and quick-read LCD</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Digital%20Vernier%20Caliper%20-%20Premium%20Model*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/2278-180.jpg" alt="Combination Square Set - 180mm">
+                        <div class="tool-badge gold">Multi-Purpose</div>
+                    </div>
+                    <h3>Combination Square Set - 180mm</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.7 (103 reviews)</p>
+                    <p class="tool-specs">Multi-purpose measuring tool with square head, protractor, and center finder</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Combination%20Square%20Set%20-%20180mm*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+
+                <div class="featured-tool">
+                    <div class="tool-image-wrapper">
+                        <img src="products-images/3109-25A.jpg" alt="Digital Outside Micrometer - 0-25mm">
+                        <div class="tool-badge gold">Precision</div>
+                    </div>
+                    <h3>Digital Outside Micrometer - 0-25mm</h3>
+                    <p class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (56 reviews)</p>
+                    <p class="tool-specs">High-accuracy micrometer with digital LCD readout and carbide measuring faces</p>
+                    <a href="https://wa.me/923270177567?text=Hi%2C%20I%27m%20interested%20in%3A%0A%0A*Digital%20Outside%20Micrometer%20-%200-25mm*%0A%0APlease%20send%20me%20more%20details." class="btn btn-primary" target="_blank" rel="noopener">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid-section" id="our-product-line">
+        <div class="container">
+            <h2 class="section-title">Our Product Line</h2>
+            <div id="productsGrid" class="products-grid-large">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="products-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Solution?</h2>
+                <p>Our solutions team can help you build the perfect toolkit for your specific needs</p>
+                <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
+                <a href="https://wa.me/923270177567" class="btn btn-secondary" target="_blank" rel="noopener">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="logo hmt.png" alt="HMT Tools Logo"></a>
+                    </div>
+                    <h3>HARD METAL TRADERS</h3>
+                    <p>Your trusted partner for professional quality tools and hardware solutions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html#best-sellers">Hand Tools</a></li>
+                        <li><a href="products.html#best-sellers">Power Tools</a></li>
+                        <li><a href="products.html#best-sellers">Cutting Tools</a></li>
+                        <li><a href="products.html#best-sellers">Measuring Tools</a></li>
+                        <li><a href="products.html#best-sellers">Storage Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html?inquiry=careers#contactForm">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="support.html">Product Support</a></li>
+                        <li><a href="support.html#warranty">Warranty Info</a></li>
+                        <li><a href="support.html#downloads">Downloads</a></li>
+                        <li><a href="support.html#faq">FAQ</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-contact-map">
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 14-B Davis Road, opposite Total Petrol Pump، Garhi Shahu, Lahore, Punjab 54000</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@hmttools.com">info@hmttools.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+923270177567">0327-0177567</a></p>
+                </div>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps?q=14-B+Davis+Road+Garhi+Shahu+Lahore&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hard Metal Traders (HMT). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Product data
+        const products = [
+            { id: 1, name: 'Digital Vernier Caliper - 150mm', category: 'measuring-tools', price: 0, rating: 4.9, reviews: 89, image: 'products-images/1108.jpg', description: 'High-precision digital caliper for accurate inside, outside, and depth measurements. Features an LCD display, stainless-steel body, and smooth sliding mechanism.' },
+            { id: 2, name: 'Dial Caliper - 150mm', category: 'measuring-tools', price: 0, rating: 4.6, reviews: 78, image: 'products-images/1312.jpg', description: 'Durable dial caliper with clear analog scale for precise measurement. Ideal for machining, fabrication, and quality inspection.' },
+            { id: 3, name: 'Stainless Steel Vernier Caliper - 150mm', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 94, image: 'products-images/1205.jpg', description: 'Classic vernier caliper with dual measurement scales. Provides reliable and repeatable readings in industrial environments.' },
+            { id: 4, name: 'Digital Vernier Caliper - Premium Model', category: 'measuring-tools', price: 0, rating: 4.9, reviews: 145, image: 'products-images/1115.jpg', description: 'High-accuracy digital caliper with reinforced frame and quick-read LCD. Suitable for professional engineering and workshop use.' },
+            { id: 5, name: 'Combination Square Set - 180mm', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 103, image: 'products-images/2278-180.jpg', description: 'Multi-purpose measuring tool with square head, protractor, and center finder. Perfect for carpentry, metalwork, and engineering layout.' },
+            { id: 6, name: 'Dial Indicator - 0-10mm Range', category: 'measuring-tools', price: 0, rating: 4.8, reviews: 67, image: 'products-images/2322-160A.jpg', description: 'Precision dial gauge for measuring small linear displacements. Used in alignment, machine setup, and inspection tasks.' },
+            { id: 7, name: 'Dial Indicator - Large Face Type', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 52, image: 'products-images/2308-10A.jpg', description: 'Clear, easy-to-read dial indicator providing accurate readings for professional metrology and machine alignment.' },
+            { id: 8, name: 'Bevel Protractor with Stainless Steel Blade', category: 'measuring-tools', price: 0, rating: 4.8, reviews: 41, image: 'products-images/2372.jpg', description: 'High-precision protractor ideal for angle measurement, layout work, and machining applications.' },
+            { id: 9, name: 'Feeler Gauge Set - 32 Blades', category: 'measuring-tools', price: 0, rating: 4.6, reviews: 85, image: 'products-images/4602.jpg', description: 'Flexible steel feeler gauge for checking gaps, clearances, and tolerances in engines and machinery.' },
+            { id: 10, name: 'Dial Test Indicator - Lever Type', category: 'measuring-tools', price: 0, rating: 4.9, reviews: 38, image: 'products-images/2364-10.jpg', description: 'Lever-style test indicator designed for measuring small surface deviations and alignment tasks.' },
+            { id: 11, name: 'Digital Outside Micrometer - 0-25mm', category: 'measuring-tools', price: 0, rating: 5.0, reviews: 56, image: 'products-images/3109-25A.jpg', description: 'High-accuracy micrometer with digital LCD readout, carbide measuring faces, and ratchet stop.' },
+            { id: 12, name: 'Mechanical Outside Micrometer - 25-50mm', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 72, image: 'products-images/3203-50A.jpg', description: 'Rugged micrometer with thimble scale, friction ratchet, and hardened measuring anvils.' },
+
+            { id: 13, name: 'Engineer\'s Square - Precision Steel', category: 'measuring-tools', price: 0, rating: 4.8, reviews: 63, image: 'products-images/4790.jpg', description: 'High-accuracy square for checking 90 degree angles in machining, welding, and manufacturing.' },
+            { id: 14, name: 'Dial Thickness Gauge', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 29, image: 'products-images/2365.jpg', description: 'Accurate gauge for measuring sheet metal, plastic, paper, and other materials with consistent thickness.' },
+            { id: 15, name: 'Magnetic Base Stand - Standard Model', category: 'measuring-tools', price: 0, rating: 4.8, reviews: 91, image: 'products-images/6200.jpg', description: 'Stable magnetic stand for holding dial indicators during inspection and alignment tasks.' },
+            { id: 16, name: 'Mechanical Outside Micrometer - 0-25mm', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 108, image: 'products-images/3210-25A.jpg', description: 'Standard micrometer with friction thimble and carbide tips for professional measurement tasks.' },
+            { id: 17, name: 'Dial Height Gauge - 300mm', category: 'measuring-tools', price: 0, rating: 4.9, reviews: 44, image: 'products-images/6201.jpg', description: 'Used for vertical measurements and marking tasks on surface plates. Features dial-based fine adjustment.' },
+
+            { id: 18, name: 'Frame Spirit Level - Precision Industrial', category: 'measuring-tools', price: 0, rating: 4.8, reviews: 76, image: 'products-images/4902.jpg', description: 'Heavy-duty precision level ideal for machine installation, surface leveling, and workshop alignment.' },
+            { id: 19, name: 'Precision Straight Edge - 200mm', category: 'measuring-tools', price: 0, rating: 4.6, reviews: 58, image: 'products-images/4903-200A.jpg', description: 'High-accuracy steel straight edge for checking flatness and parallelism in workshop settings.' },
+            
+            { id: 20, name: 'Dormer Pramet Force X - Solid Carbide Drill (Gen2)', category: 'cutting-tools', price: 89.99, rating: 4.8, reviews: 64, image: 'products-images/DOPA-Force-header-jpg (1).jpg', sku: 'FX-GEN2', description: 'Force X Generation 2 solid carbide drills: CTW flute design, 4-facet split point and TiAlN top coating for superior hole quality and long tool life.' },
+            { id: 21, name: 'Dormer HSS Twist Drill (General Purpose)', category: 'cutting-tools', price: 14.99, rating: 4.6, reviews: 112, image: 'https://m.media-amazon.com/images/I/51IKx5WhgbL._SY445_.jpg', sku: 'HSS-TWIST', description: 'High-quality HSS twist drills for general drilling in steels and non-ferrous materials; reliable, economical and widely used across industry.' },
+            { id: 22, name: 'Dormer Pramet Metric Thread Taps', category: 'cutting-tools', price: 24.99, rating: 4.7, reviews: 48, image: 'https://api.dormerpramet.com/medias/FORCE-description-vertical.png?context=bWFzdGVyfHJvb3R8MTY3ODAzfGltYWdlL3BuZ3xhRGRpTDJoa1lTODVOVEV5TmpnMk5EZzFOVE0wTDBaUFVrTkZYMlJsYzJOeWFYQjBhVzl1WDNabGNuUnBZMkZzTG5CdVp3fGY3NTMyZjFmYjk0NTJiNDY1ZGNkMDYwMDExYjc5MmFiNTQzOGQ1NWQyMTMzZjIzYzljNjUxMmExYTYyNWFmYTI&attachment=true', sku: 'TAP-METRIC', description: 'Metric taps offering precise thread form and consistent results; suitable for standard production and repair work.' },
+            { id: 23, name: 'Dormer Solid Carbide End Mill', category: 'cutting-tools', price: 69.99, rating: 4.8, reviews: 37, image: 'https://api.dormerpramet.com/medias/RS403-tip.png?context=bWFzdGVyfHJvb3R8NjE2NTR8aW1hZ2UvcG5nfGFHVTNMMmhtWmk4NU5URXdOREV4TmprNE1qQTJMMUpUTkRBelgzUnBjQzV3Ym1jfDZmNzdjYTM5OTg5MjVlZGQxMjUyMjYyNWIzYjJmNmVhZWVkNjJiMWM0NDQ3ZjhjOTU5MWNkOWM2NmVkY2ZhMzQ&attachment=true', sku: 'SC-ENDMILL', description: 'Solid carbide end mill for high-speed milling and superior surface finish across a variety of materials.' },
+            { id: 24, name: 'Dormer Indexable Inserts - Assortment', category: 'cutting-tools', price: 129.99, rating: 4.7, reviews: 22, image: 'products-images/dormer.png', sku: 'IDX-ASSORT', description: 'Assorted indexable inserts for turning and milling; multiple grades and geometries for varied applications.' },
+            { id: 19, name: 'Precision Straight Edge - 200mm', category: 'measuring-tools', price: 0, rating: 4.7, reviews: 0, image: 'products-images/4903-200A.jpg', description: 'High-accuracy steel straight edge for checking flatness and parallelism in workshop settings.' },
+            { id: 25, name: 'Oasis Cutting Disc - Heavy Duty', category: 'cutting-tools', price: 19.99, rating: 4.5, reviews: 14, image: 'products-images/blade.png', description: 'Heavy-duty cutting blade designed for professional use in metalworking, woodworking, and fabrication applications. Superior edge retention and durability.' }
+        ];
+
+        function displayProducts(filteredProducts = products) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = '<p class="no-results">No products found. Try adjusting your filters.</p>';
+                return;
+            }
+
+                filteredProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card-large';
+                card.innerHTML = `
+                    <div class="product-image-large">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info-large">
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <a href="#" class="btn btn-secondary view-details" data-id="${product.id}">View Details</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterProducts() {
+            const searchTerm = document.getElementById('productSearch').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+
+            let filtered = products.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+                const matchesCategory = !category || product.category === category;
+
+                return matchesSearch && matchesCategory;
+            });
+
+            displayProducts(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('productSearch').value = '';
+            document.getElementById('categoryFilter').value = '';
+            displayProducts();
+        }
+
+        // Event listeners for filtering
+        document.getElementById('productSearch').addEventListener('input', filterProducts);
+        document.getElementById('categoryFilter').addEventListener('change', filterProducts);
+
+        // Display products on page load
+        displayProducts();
+
+        // Modal markup & behavior
+        const modalTemplate = `
+            <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal-content" role="document">
+                    <button class="modal-close" aria-label="Close product details">&times;</button>
+                    <div class="modal-body-wrapper">
+                        <div class="modal-media"><img src="" alt=""></div>
+                        <div class="modal-body">
+                            <h3 class="modal-title"></h3>
+                            <p class="modal-sku"></p>
+                            <p class="modal-rating"></p>
+                            <p class="modal-desc"></p>
+                            <div class="modal-actions">
+                                <div class="price modal-price"></div>
+                                <a href="https://wa.me/923270177567" id="modalWhatsAppBtn" class="btn btn-primary" target="_blank" rel="noopener">Contact to Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Insert modal into document
+        document.body.insertAdjacentHTML('beforeend', modalTemplate);
+
+        const productModal = document.getElementById('productModal');
+        const modalClose = productModal.querySelector('.modal-close');
+
+        function openModal(product) {
+            productModal.setAttribute('aria-hidden', 'false');
+            productModal.style.display = 'block';
+            productModal.querySelector('.modal-media img').src = product.image;
+            productModal.querySelector('.modal-media img').alt = product.name;
+            productModal.querySelector('.modal-title').textContent = product.name;
+            productModal.querySelector('.modal-sku').textContent = product.sku ? ('SKU: ' + product.sku) : '';
+            productModal.querySelector('.modal-desc').textContent = product.description || '';
+            // Generate star rating display
+            const fullStars = Math.floor(product.rating);
+            const hasHalfStar = product.rating % 1 >= 0.5;
+            let starsHtml = '';
+            for (let i = 0; i < fullStars; i++) {
+                starsHtml += '<i class="fas fa-star"></i>';
+            }
+            if (hasHalfStar) {
+                starsHtml += '<i class="fas fa-star-half-alt"></i>';
+            }
+            productModal.querySelector('.modal-rating').innerHTML = `${starsHtml} ${product.rating} (${product.reviews} reviews)`;
+            productModal.querySelector('.modal-price').textContent = '$' + product.price.toFixed(2);
+            
+            // Update WhatsApp link with product details
+            const whatsappBtn = productModal.querySelector('#modalWhatsAppBtn');
+            const message = `Hi, I'm interested in:\n\n*${product.name}*${product.sku ? '\nSKU: ' + product.sku : ''}\n\nPlease send me more details.`;
+            const whatsappUrl = `https://wa.me/923270177567?text=${encodeURIComponent(message)}`;
+            whatsappBtn.href = whatsappUrl;
+            
+            // focus the close button for accessibility
+            modalClose.focus();
+        }
+
+        function closeModal() {
+            productModal.setAttribute('aria-hidden', 'true');
+            productModal.style.display = 'none';
+        }
+
+        // Delegate clicks from product grid to open modal
+        document.getElementById('productsGrid').addEventListener('click', function(e) {
+            const btn = e.target.closest('.view-details');
+            if (!btn) return;
+            e.preventDefault();
+            const id = parseInt(btn.getAttribute('data-id'), 10);
+            const product = products.find(p => p.id === id);
+            if (product) openModal(product);
+        });
+
+        // Close handlers
+        modalClose.addEventListener('click', closeModal);
+        productModal.addEventListener('click', function(e) {
+            if (e.target === productModal) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && productModal.getAttribute('aria-hidden') === 'false') closeModal();
+        });
+    </script>
+    <a href="https://wa.me/923270177567?text=Hi%2C%20I%20need%20information%20about%20the%20Products." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="whatsapp-label" aria-hidden="true">Chat on WhatsApp</span>
+    </a>
+</body>
+</html>
